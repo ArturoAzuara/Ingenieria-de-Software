@@ -3,15 +3,15 @@ package org.example;
 public class Periodicos implements Imprenta {
     private int paginas;
     private String nombre;
-    private String dia;
-    private String mes;
-    private String anio;
+    private int dia;
+    private int mes;
+    private int anio;
     private int precio;
 
     public Periodicos() {
     }
 
-    public Periodicos(int paginas, String nombre, String dia, String mes, String anio, int precio) {
+    public Periodicos(int paginas, String nombre, int dia, int mes, int anio, int precio) {
         this.paginas = paginas;
         this.nombre = nombre;
         this.dia = dia;
@@ -36,27 +36,27 @@ public class Periodicos implements Imprenta {
         this.nombre = nombre;
     }
 
-    public String getDia() {
+    public int getDia() {
         return dia;
     }
 
-    public void setDia(String dia) {
+    public void setDia(int dia) {
         this.dia = dia;
     }
 
-    public String getMes() {
+    public int getMes() {
         return mes;
     }
 
-    public void setMes(String mes) {
+    public void setMes(int mes) {
         this.mes = mes;
     }
 
-    public String getAnio() {
+    public int getAnio() {
         return anio;
     }
 
-    public void setAnio(String anio) {
+    public void setAnio(int anio) {
         this.anio = anio;
     }
 
@@ -73,9 +73,9 @@ public class Periodicos implements Imprenta {
         return "Periodicos{" +
                 "paginas=" + paginas +
                 ", nombre='" + nombre + '\'' +
-                ", dia='" + dia + '\'' +
-                ", mes='" + mes + '\'' +
-                ", anio='" + anio + '\'' +
+                ", dia=" + dia +
+                ", mes=" + mes +
+                ", anio=" + anio +
                 ", precio=" + precio +
                 '}';
     }
