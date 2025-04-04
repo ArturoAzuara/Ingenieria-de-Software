@@ -1,31 +1,27 @@
 package org.example;
 
 public class Periodicos implements Imprenta {
-    private int paginas;
+    private int id;
     private String nombre;
-    private int dia;
-    private int mes;
-    private int anio;
+    private String fecha;
     private int precio;
 
     public Periodicos() {
     }
 
-    public Periodicos(int paginas, String nombre, int dia, int mes, int anio, int precio) {
-        this.paginas = paginas;
+    public Periodicos(int id, String nombre, String fecha, int precio) {
+        this.id = id;
         this.nombre = nombre;
-        this.dia = dia;
-        this.mes = mes;
-        this.anio = anio;
+        this.fecha = fecha;
         this.precio = precio;
     }
 
-    public int getPaginas() {
-        return paginas;
+    public int getId() {
+        return id;
     }
 
-    public void setPaginas(int paginas) {
-        this.paginas = paginas;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -36,28 +32,12 @@ public class Periodicos implements Imprenta {
         this.nombre = nombre;
     }
 
-    public int getDia() {
-        return dia;
+    public String getFecha() {
+        return fecha;
     }
 
-    public void setDia(int dia) {
-        this.dia = dia;
-    }
-
-    public int getMes() {
-        return mes;
-    }
-
-    public void setMes(int mes) {
-        this.mes = mes;
-    }
-
-    public int getAnio() {
-        return anio;
-    }
-
-    public void setAnio(int anio) {
-        this.anio = anio;
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
     }
 
     public int getPrecio() {
@@ -71,11 +51,9 @@ public class Periodicos implements Imprenta {
     @Override
     public String toString() {
         return "Periodicos{" +
-                "paginas=" + paginas +
+                "id=" + id +
                 ", nombre='" + nombre + '\'' +
-                ", dia=" + dia +
-                ", mes=" + mes +
-                ", anio=" + anio +
+                ", fecha='" + fecha + '\'' +
                 ", precio=" + precio +
                 '}';
     }

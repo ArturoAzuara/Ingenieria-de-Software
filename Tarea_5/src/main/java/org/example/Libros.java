@@ -1,20 +1,62 @@
 package org.example;
 
 public class Libros implements Imprenta {
-    private int paginas;
-    private String titulo;
+    private int isbn;
+    private String nombre;
+    private String reseña;
     private String autor;
-    private String editorial;
     private int precio;
+    private int paginas;
 
     public Libros() {
     }
 
-    public Libros(int paginas, String titulo, String autor, String editorial, int precio) {
-        this.paginas = paginas;
-        this.titulo = titulo;
+    public Libros(int isbn, String nombre, String reseña, String autor, int precio, int paginas) {
+        this.isbn = isbn;
+        this.nombre = nombre;
+        this.reseña = reseña;
         this.autor = autor;
-        this.editorial = editorial;
+        this.precio = precio;
+        this.paginas = paginas;
+    }
+
+    public int getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(int isbn) {
+        this.isbn = isbn;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getReseña() {
+        return reseña;
+    }
+
+    public void setReseña(String reseña) {
+        this.reseña = reseña;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public int getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(int precio) {
         this.precio = precio;
     }
 
@@ -26,46 +68,15 @@ public class Libros implements Imprenta {
         this.paginas = paginas;
     }
 
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getAutor() {
-        return autor;
-    }
-
-    public void setAutor(String autor) {
-        this.autor = autor;
-    }
-
-    public String getEditorial() {
-        return editorial;
-    }
-
-    public void setEditorial(String editorial) {
-        this.editorial = editorial;
-    }
-
-    public int getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(int precio) {
-        this.precio = precio;
-    }
-
     @Override
     public String toString() {
         return "Libros{" +
-                "paginas=" + paginas +
-                ", titulo='" + titulo + '\'' +
+                "isbn=" + isbn +
+                ", nombre='" + nombre + '\'' +
+                ", reseña='" + reseña + '\'' +
                 ", autor='" + autor + '\'' +
-                ", editorial='" + editorial + '\'' +
                 ", precio=" + precio +
+                ", paginas=" + paginas +
                 '}';
     }
 }

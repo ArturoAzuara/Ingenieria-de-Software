@@ -1,53 +1,46 @@
 package org.example;
 
 public class Revistas implements Imprenta{
-    private String titulo;
-    private String editor;
-    private String genero;
-    private int numero;
+
+    private int issn;
+    private String nombre;
+    private int edicion;
     private int precio;
+    private String periodicidad;
 
     public Revistas() {
     }
 
-    public Revistas(String titulo, String editor, String genero, int numero, int precio) {
-        this.titulo = titulo;
-        this.editor = editor;
-        this.genero = genero;
-        this.numero = numero;
+    public Revistas(int issn, String nombre, int edicion, int precio, String periodicidad) {
+        this.issn = issn;
+        this.nombre = nombre;
+        this.edicion = edicion;
         this.precio = precio;
+        this.periodicidad = periodicidad;
     }
 
-    public String getTitulo() {
-        return titulo;
+    public int getIssn() {
+        return issn;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public void setIssn(int issn) {
+        this.issn = issn;
     }
 
-    public String getEditor() {
-        return editor;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setEditor(String editor) {
-        this.editor = editor;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getGenero() {
-        return genero;
+    public int getEdicion() {
+        return edicion;
     }
 
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
-
-    public int getNumero() {
-        return numero;
-    }
-
-    public void setNumero(int numero) {
-        this.numero = numero;
+    public void setEdicion(int edicion) {
+        this.edicion = edicion;
     }
 
     public int getPrecio() {
@@ -58,14 +51,22 @@ public class Revistas implements Imprenta{
         this.precio = precio;
     }
 
+    public String getPeriodicidad() {
+        return periodicidad;
+    }
+
+    public void setPeriodicidad(String periodicidad) {
+        this.periodicidad = periodicidad;
+    }
+
     @Override
     public String toString() {
         return "Revistas{" +
-                "titulo='" + titulo + '\'' +
-                ", editor='" + editor + '\'' +
-                ", genero='" + genero + '\'' +
-                ", numero=" + numero +
+                "issn=" + issn +
+                ", nombre='" + nombre + '\'' +
+                ", edicion=" + edicion +
                 ", precio=" + precio +
+                ", periodicidad='" + periodicidad + '\'' +
                 '}';
     }
 }
