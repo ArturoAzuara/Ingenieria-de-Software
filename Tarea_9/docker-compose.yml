@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  mysqldb:
+    image: mysql:8
+    container_name: mysqldb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Root.1234
+      MYSQL_DATABASE: isdbmyj
+      MYSQL_USER: userdb
+      MYSQL_PASSWORD: User.1234
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./midatos:/var/lib/mysql
+
+  compu-api:
+    build: ./computadoraapi
+    container_name: compu-api
+    depends_on:
+      - mysqldb
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysqldb:3306/isdbmyj
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: Root.1234
+    ports:
+      - "8081:8080"
+
+
+
